@@ -4,13 +4,13 @@ import java.util.Scanner;
 public class MonitoringIO {
     public static void main (String[] args){
         Scanner s = new Scanner(System.in);
-        int u_choice = s.nextInt();
+        
         System.out.println("          MENU        ");
         System.out.println("Enter 1 for observatory data");
         System.out.println("Enter 2 for 'galamsey' data");
         System.out.println("Enter 3 for Monitoring statistics");
         System.out.println("Enter 4 to Exit");
-
+        int u_choice = s.nextInt();
         switch (u_choice){
             case 1:
                 System.out.println("Name of observatory: ");
@@ -27,7 +27,7 @@ public class MonitoringIO {
 
                 System.out.println("List of 'galamsey' events recorded: ");
                 System.out.println();
-
+                System.out.println(name+", "+location+", "+yr+", "+col);
                 break;
 
             case 2:

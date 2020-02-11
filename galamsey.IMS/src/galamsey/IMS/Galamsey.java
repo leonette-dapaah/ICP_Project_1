@@ -1,10 +1,10 @@
 package galamsey.IMS;
 public class Galamsey {
 
-    String veg_colour;
-    String position;
-    int colour_val;
-    int year;
+    private String veg_colour;
+    private String position;
+    private int colour_val;
+    private int year;
 
     public Galamsey(){
 
