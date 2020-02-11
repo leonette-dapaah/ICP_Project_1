@@ -20,6 +20,7 @@ public class Monitoring {
 	// This method returns A list of all “galamsey” recorded with colour 
 	// value greater than a given/arbitrary number.
 	public ArrayList<String> getAllRecordsAbove(int value){
+		
 		return new ArrayList<String>();
 	}
 	// This method returns The observatory with the largest average “galamsey” colour value.
