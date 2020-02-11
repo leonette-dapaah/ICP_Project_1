@@ -8,7 +8,7 @@ public class Monitoring {
 	 */
 	
 	
-	private ArrayList<String> Observatories;
+	private ArrayList<Observatory> Observatories;
 	
 	public Monitoring() {
 		
@@ -16,6 +16,9 @@ public class Monitoring {
 	// This method returns the largest “galamsey” colour value ever recorded.
 	public int largestGalamColVal() {
 		return 0;
+	}
+	public void addObservatory(Observatory Observe) {
+		Observatories.add(Observe);
 	}
 	// This method returns A list of all “galamsey” recorded with colour 
 	// value greater than a given/arbitrary number.
