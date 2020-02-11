@@ -1,58 +1,90 @@
 package galamsey.IMS;
+import java.lang.NumberFormatException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MonitoringIO {
     public static void main (String[] args){
         Scanner s = new Scanner(System.in);
-        
-        System.out.println("          MENU        ");
-        System.out.println("Enter 1 for observatory data");
-        System.out.println("Enter 2 for 'galamsey' data");
-        System.out.println("Enter 3 for Monitoring statistics");
-        System.out.println("Enter 4 to Exit");
-        int u_choice = s.nextInt();
-        switch (u_choice){
-            case 1:
-                System.out.println("Name of observatory: ");
-                String name = s.next();
+        String u_choice = "";
 
-                System.out.println("Enter country location: ");
-                String location = s.next();
+        while (u_choice != "4"){
+            System.out.println("          MENU        ");
+            System.out.println("Enter 1 for observatory data");
+            System.out.println("Enter 2 for 'galamsey' data");
+            System.out.println("Enter 3 for Monitoring statistics");
+            System.out.println("Enter 4 to Exit");
 
-                System.out.println("Enter year galamsey operations began: ");
-                int yr = s.nextInt();
+            u_choice = s.nextLine();
 
-                System.out.println("Enter area covered by the observatory (in square kilometers): ");
-                double col = s.nextDouble();
 
-                System.out.println("List of 'galamsey' events recorded: ");
-                System.out.println();
-                System.out.println(name+", "+location+", "+yr+", "+col);
-                break;
+                switch (u_choice) {
+                    case "1":
+                        try {
+                            System.out.println("Name of observatory: ");
+                            String name = s.nextLine();
 
-            case 2:
-                System.out.println("Enter vegetation colour: ");
-                String colour = s.next();
+                            System.out.println("Enter country location: ");
+                            String location = s.nextLine();
 
-                System.out.println("Enter position (Latitude and Longitude: ): ");
-                String position = s.next();
+                            System.out.println("Enter year galamsey operations began: ");
+                            String year = s.nextLine();
+                            int yr = Integer.parseInt(year);
 
-                System.out.println("Enter colour value: ");
-                int col_val = s.nextInt();
+                            System.out.println("Enter area covered by the observatory (in square kilometers): ");
+                            String col = s.nextLine();
+                            double c = Double.parseDouble(col);
 
-                System.out.println("Enter year of event: ");
-                int year = s.nextInt();
-                break;
+                            System.out.println("List of 'galamsey' events recorded: ");
+                            System.out.println();
 
-            case 3:
-                System.out.println();
-                break;
+                            break;
+                        }
+                        catch (NumberFormatException a){
+                            System.out.println("Wrong Input");
+                            System.out.println();
+                            break;
+                        }
 
-            default:
-                System.out.println("Invalid Input");
+                    case "2":
+                        try {
+                            System.out.println("Enter vegetation colour: ");
+                            String colour = s.nextLine();
 
-            case 4:
-                System.exit(0);
+                            System.out.println("Enter position (Latitude and Longitude (eg: 5.603 N, 0.187 W))");
+                            String position = s.nextLine();
+
+                            System.out.println("Enter colour value: ");
+                            String col_val = s.nextLine();
+                            int cv = Integer.parseInt(col_val);
+
+                            System.out.println("Enter year of event: ");
+                            String yr1 = s.nextLine();
+                            int y = Integer.parseInt(yr1);
+
+                            break;
+                        }
+                        catch (Exception e) {
+                            System.out.println("Invalid Input");
+                            System.out.println();
+                            break;
+                        }
+
+                    case "3":
+                        System.out.println("The largest average 'galamsey': ");
+                        System.out.println("Largest 'galamsey' ever recorded: ");
+                        System.out.println("All 'galamsey' with colour value greater than ...");
+                        break;
+
+                    default:
+                        System.out.println("Invalid Input");
+                        System.out.println();
+                        break;
+
+                    case "4":
+                        System.exit(0);
+                }
+
         }
     }
 }
