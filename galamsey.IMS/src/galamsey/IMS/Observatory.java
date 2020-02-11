@@ -1,3 +1,4 @@
+package galamsey.IMS;
 import java.util.ArrayList;
 /**
  * @author Abdul-Aziz
@@ -9,12 +10,13 @@ public class Observatory {
 	private String country;
 	private int yearStarted;
 	private double areaCovered;
-	private ArrayList<String>list;
+	private ArrayList<Galamsey>GalamseyEvents;
 	
 	public Observatory(String obsName, String country, int yearStarted, double areaCovered) {
 		this.obsName = obsName;
 		this.country = country;
 		this.yearStarted = yearStarted;
+		this.GalamseyEvents = new ArrayList<Galamsey>();
 	}
 
 	/**
@@ -72,6 +74,16 @@ public class Observatory {
 	public void setAreaCovered(double areaCovered) {
 		this.areaCovered = areaCovered;
 	}
-	
 
+	public ArrayList<Galamsey> getGalamseyEvents() {
+		return GalamseyEvents;
+	}
+
+	public boolean addGalamsey(String veg_colour, String position,
+            		int colour_val, int year) {
+		GalamseyEvents.add(new Galamsey(veg_colour,position,colour_val,year));
+		return true;
+	}
+	
+	
 }
