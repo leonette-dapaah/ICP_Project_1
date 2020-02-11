@@ -79,10 +79,10 @@ public class Observatory {
 		return GalamseyEvents;
 	}
 
-	public boolean addGalamsey(String veg_colour, String position,
+	public void addGalamsey(String veg_colour, String position,
             		int colour_val, int year) {
 		GalamseyEvents.add(new Galamsey(veg_colour,position,colour_val,year));
-		return true;
+		
 	}
 	
 	
