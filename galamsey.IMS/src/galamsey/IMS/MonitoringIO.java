@@ -1,3 +1,4 @@
+package galamsey.IMS;
 import java.util.Scanner;
 
 public class MonitoringIO {

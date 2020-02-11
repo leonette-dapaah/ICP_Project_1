@@ -1,3 +1,4 @@
+package galamsey.IMS;
 public class Galamsey {
 
     String veg_colour;
