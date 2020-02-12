@@ -39,6 +39,8 @@ public class MonitoringIO {
                             System.out.println("List of 'galamsey' events recorded: ");
                             System.out.println();
 
+                            private Observatory obs = new Observatory(name, location, yr, c);
+                            Monitoring.addObservatories(obs);
                             break;
                         }
                         catch (NumberFormatException a){
@@ -63,6 +65,8 @@ public class MonitoringIO {
                             String yr1 = s.nextLine();
                             int y = Integer.parseInt(yr1);
 
+                            private Galamsey gala = new Galamsey(colour, positon, cv);
+                            Observatory.addObservatories(gala);
                             break;
                         }
                         catch (Exception e) {

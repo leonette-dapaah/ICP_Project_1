@@ -79,11 +79,14 @@ public class Observatory {
 		return GalamseyEvents;
 	}
 
-	public void addGalamsey(String veg_colour, String position,
-            		int colour_val, int year) {
-		GalamseyEvents.add(new Galamsey(veg_colour,position,colour_val,year));
+	public void addGalamsey(Galamsey galam) {
+		GalamseyEvents.add(galam);
 		
 	}
+	
+	public int largestGalamseyColor()
+	public double averageGalamseyValue()
+	
 	
 	
 }
