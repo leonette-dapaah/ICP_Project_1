@@ -84,8 +84,8 @@ public class Observatory {
 		
 	}
 	
-	public int largestGalamseyColor()
-	public double averageGalamseyValue()
+	public int largestGalamseyColor() {return 1;}
+	public double averageGalamseyValue() {return 1.1;}
 	
 	
 	

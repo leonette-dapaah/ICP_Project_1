@@ -8,6 +8,7 @@ public class MonitoringIO {
     public static void main (String[] args){
         Scanner s = new Scanner(System.in);
         String u_choice = "";
+        Monitoring AfricanSite = new Monitoring();
 
         while (u_choice != "4"){
             System.out.println("          MENU        ");
@@ -38,9 +39,10 @@ public class MonitoringIO {
 
                             System.out.println("List of 'galamsey' events recorded: ");
                             System.out.println();
-
-                            private Observatory obs = new Observatory(name, location, yr, c);
-                            Monitoring.addObservatories(obs);
+                            
+                            AfricanSite.addObservatory(new Observatory(name, location, yr, c));
+//                            private Observatory obs = new Observatory(name, location, yr, c);
+//                            Monitoring.addObservatories(obs);
                             break;
                         }
                         catch (NumberFormatException a){
@@ -64,9 +66,11 @@ public class MonitoringIO {
                             System.out.println("Enter year of event: ");
                             String yr1 = s.nextLine();
                             int y = Integer.parseInt(yr1);
-
-                            private Galamsey gala = new Galamsey(colour, positon, cv);
-                            Observatory.addObservatories(gala);
+                            
+                            AfricanSite.getAllRecordsAbove().get(0).addGalamsey(new Galamsey(colour, position, cv,y));
+//                            
+//                            private Galamsey gala = new Galamsey(colour, positon, cv);
+//                            Observatory.addObservatories(gala);
                             break;
                         }
                         catch (Exception e) {
