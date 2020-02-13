@@ -35,6 +35,13 @@ public class Monitoring {
 				large = E;
 		return large.toString();
 	}
+	public double getLargestAverageGalamseyValue() {
+		double large = 0.0;
+		for(Observatory E:getObservatories())
+			if(E.averageGalamseyCValue()>large)
+				large = E.averageGalamseyCValue();
+		return large;
+	}
 	public int largestGalamseyValueEverRecord() {
 		int large = 0;
 		for(Observatory E:getObservatories())

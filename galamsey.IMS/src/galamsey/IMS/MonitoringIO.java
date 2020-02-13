@@ -5,10 +5,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MonitoringIO {
-    public static void main (String[] args){
-        Scanner s = new Scanner(System.in);
+	public static void input() {
+		Scanner s = new Scanner(System.in);
         String u_choice = "";
-        Monitoring AfricanSite = new Monitoring();
+        Monitoring Africa = new Monitoring();
 
         while (u_choice != "4"){
             System.out.println("          MENU        ");
@@ -30,17 +30,19 @@ public class MonitoringIO {
                             String location = s.nextLine();
 
                             System.out.println("Enter year galamsey operations began: ");
-                            String year = s.nextLine();
-                            int yr = Integer.parseInt(year);
+                            int yr = Integer.parseInt(s.nextLine());
+//                            String year = s.nextLine();
+//                            int yr = Integer.parseInt(year);
 
-                            System.out.println("Enter area covered by the observatory (in square kilometers): ");
-                            String col = s.nextLine();
-                            double c = Double.parseDouble(col);
+                            System.out.println("Enter area covered by the observatory (in square kilometers): ");               
+                            double c = Double.parseDouble(s.nextLine());
 
                             System.out.println("List of 'galamsey' events recorded: ");
                             System.out.println();
                             
-                            AfricanSite.addObservatory(new Observatory(name, location, yr, c));
+                            Africa.addObservatory(new Observatory(name, location, yr, c));
+                            System.out.println(Africa.getObservatories().get(Africa.getObservatories().size()-1));
+                            System.out.println("----------------------------------------------\n");
 //                            private Observatory obs = new Observatory(name, location, yr, c);
 //                            Monitoring.addObservatories(obs);
                             break;
@@ -67,8 +69,9 @@ public class MonitoringIO {
                             String yr1 = s.nextLine();
                             int y = Integer.parseInt(yr1);
                             
-                            AfricanSite.getObservatories().get(0).addGalamsey(new Galamsey(colour, position, cv,y));
+                            Africa.getObservatories().get(Africa.getObservatories().size()-1).addGalamsey(new Galamsey(colour, position, cv,y));
                             
+                            System.out.println(Africa.getObservatories().get(Africa.getObservatories().size()-1).galamseyAboveValueOf(0));
 //                            
 //                            private Galamsey gala = new Galamsey(colour, positon, cv);
 //                            Observatory.addObservatories(gala);
@@ -81,20 +84,61 @@ public class MonitoringIO {
                         }
 
                     case "3":
-                        System.out.println("The largest average 'galamsey': ");
-                        System.out.println("Largest 'galamsey' ever recorded: ");
-                        System.out.println("All 'galamsey' with colour value greater than ...");
+                    	try {
+                    		System.out.println("Enter 1 to calculate the largest average galamsey value\n"
+                    				+ "Enter 2 to calculate the largest 'galamsey' ever recorded\n"
+                    				+ "Enter 3 to get All 'galamsey' with colour value greater than certain threshold value");
+                    		String in = s.nextLine();
+                    		switch(in) {
+                    		case "1":
+                    			System.out.println("The largest average recorded is: "+Africa.getLargestAverageGalamseyValue());
+                    		case "2":
+                    			System.out.println("The largest Galamsey color value ever record is: "+Africa.largestGalamseyValueEverRecord());
+                    		case "3":
+                    			try {
+                    				System.out.println("Enter the Threshold: \n");
+                    				int i = s.nextInt();
+                    				System.out.println("The Galamsey Activities above the threshold are below:"
+                    						+ "----------------------------------------\n"+
+                    						Africa.getAllGalamseyActAboveValueof(i));
+                    				
+                    				
+                    			}catch(Exception e) {
+                           		 System.out.println("Invalid Input");
+                                 System.out.println();
+                                 break;
+                    			}
+                    		default:
+                    			System.out.println("Invalid Input");
+                                System.out.println();
+                                break;
+                    		}
+                    	}catch(Exception e) {
+                    		 System.out.println("Invalid Input");
+                             System.out.println();
+                             break;
+                    	}
+//                        System.out.println("The largest average 'galamsey': ");
+//                        System.out.println("Largest 'galamsey' ever recorded: ");
+//                        System.out.println("All 'galamsey' with colour value greater than ...");
                         break;
-
+                    
+                    case "4":
+                        System.exit(0);
+                        
                     default:
                         System.out.println("Invalid Input");
                         System.out.println();
                         break;
 
-                    case "4":
-                        System.exit(0);
+                    
                 }
 
         }
+		
+	}
+    public static void main (String[] args){
+        
+        input();
     }
 }

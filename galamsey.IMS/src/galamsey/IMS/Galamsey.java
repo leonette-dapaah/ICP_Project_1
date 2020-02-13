@@ -79,11 +79,11 @@ public class Galamsey {
     
     @Override
     public String toString() {
-    	return "Vegetation Colour: "+ getVeg_colour()+"\nColor Value: "+getColour_val()+"\nPosition: "+
-    			getPosition()+"\nYear of data: "+ getYear()+"\n";
+    	return "Vegetation Colour: "+ getVeg_colour()+"\n Color Value: "+getColour_val()+"\n Position: "+
+    			getPosition()+"\n Year of data: "+ getYear()+"\n";
     }
-    public static void main(String[] args) {
-		Galamsey kumasi = new Galamsey("Green","1.2300,9.632",1,2019);
-		System.out.println(kumasi);
-	}
+//    public static void main(String[] args) {
+//		Galamsey kumasi = new Galamsey("Green","1.2300,9.632",1,2019);
+//		System.out.println(kumasi);
+//	}
 }
