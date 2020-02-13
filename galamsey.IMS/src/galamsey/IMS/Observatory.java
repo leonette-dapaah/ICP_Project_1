@@ -16,6 +16,7 @@ public class Observatory {
 		this.obsName = obsName;
 		this.country = country;
 		this.yearStarted = yearStarted;
+		this.areaCovered = areaCovered;
 		this.GalamseyEvents = new ArrayList<Galamsey>();
 	}
 
@@ -84,9 +85,48 @@ public class Observatory {
 		
 	}
 	
-	public int largestGalamseyColor() {return 1;}
-	public double averageGalamseyValue() {return 1.1;}
+	public int getLargestGalamseyColorV() {
+		int large = 0;
+		for(Galamsey E:getGalamseyEvents())
+			if(E.getColour_val()>large)
+				large = E.getColour_val();
+		return large;
+	}
 	
+	public double averageGalamseyCValue(){
+		int total = 0;
+		int count = 0;
+		for(Galamsey E:getGalamseyEvents()) {
+			total+=E.getColour_val();
+			count++;
+		}
+		
+		if (count != 0)
+			return total/count;
+		else 
+			return 0.0;
+			
+	}
+	public String galamseyAboveValueOf(int value) {
+		String info = "";
+		int i = 1;
+		for(Galamsey E:getGalamseyEvents())
+			if(E.getColour_val()>value) {
+				String y = i+"."+E;
+				info+=y;
+				i++;
+			}
+				
+		return info;
+	}
+
+	public String toString() {
+		return "Name of Observatory: "+getObsName()+"\nCountry of Observatory: "+getCountry()+
+				"\nYear started: "+getYearStarted()+"\nArea covered by Observatory: "+getAreaCovered();
+	}
 	
-	
+//	public static void main(String[] args) {
+//		Observatory Ghana = new Observatory("main source","Ghana",2002,4589.65);
+//		System.out.println(Ghana);
+//	}
 }

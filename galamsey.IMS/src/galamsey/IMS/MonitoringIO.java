@@ -67,7 +67,8 @@ public class MonitoringIO {
                             String yr1 = s.nextLine();
                             int y = Integer.parseInt(yr1);
                             
-                            AfricanSite.getAllRecordsAbove().get(0).addGalamsey(new Galamsey(colour, position, cv,y));
+                            AfricanSite.getObservatories().get(0).addGalamsey(new Galamsey(colour, position, cv,y));
+                            
 //                            
 //                            private Galamsey gala = new Galamsey(colour, positon, cv);
 //                            Observatory.addObservatories(gala);

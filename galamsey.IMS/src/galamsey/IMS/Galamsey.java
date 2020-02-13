@@ -76,4 +76,14 @@ public class Galamsey {
     public void setYear(int year) {
         this.year = year;
     }
+    
+    @Override
+    public String toString() {
+    	return "Vegetation Colour: "+ getVeg_colour()+"\nColor Value: "+getColour_val()+"\nPosition: "+
+    			getPosition()+"\nYear of data: "+ getYear()+"\n";
+    }
+    public static void main(String[] args) {
+		Galamsey kumasi = new Galamsey("Green","1.2300,9.632",1,2019);
+		System.out.println(kumasi);
+	}
 }
