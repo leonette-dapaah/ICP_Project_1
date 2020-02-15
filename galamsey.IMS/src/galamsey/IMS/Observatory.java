@@ -17,7 +17,7 @@ public class Observatory {
 		this.country = country;
 		this.yearStarted = yearStarted;
 		this.areaCovered = areaCovered;
-		this.GalamseyEvents = new ArrayList<Galamsey>();
+		this.GalamseyEvents = new ArrayList<>();
 	}
 
 	/**

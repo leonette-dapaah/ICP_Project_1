@@ -1,5 +1,8 @@
 package galamsey.IMS;
 
+import java.io.PrintWriter;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
 import java.lang.NumberFormatException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -124,6 +127,30 @@ public class MonitoringIO {
                         break;
                     
                     case "4":
+                    	PrintWriter printWriter = null;
+    		    		
+                    	try {
+                    		//Note that we are able to append to the file because of the "true" parameter
+                    		printWriter = new PrintWriter(new FileOutputStream("Galamsey.txt", true));
+                    		
+                    	}catch(FileNotFoundException fnfe) {
+                    		fnfe.getMessage();
+                    	}
+                    	for (int i = 0; i<Africa.getObservatories().size(); i++) {	
+                    		printWriter.print(Africa.getObservatories().get(i)+"\n");
+                    		//printWriter.println();
+                    		printWriter.print("\n" + Africa.getObservatories().get(i).getGalamseyEvents());
+                    	}
+                    	
+                    	//printWriter.print(Africa.getObservatories());
+                  		//printWriter.print((Africa.getObservatories()).getGalamseyEvents());
+                  		//printWriter.println();
+                  			
+                  		    
+                  		  
+                  		//Close Writer
+                  		printWriter.close();
+                  		System.out.println("Information saved in a Galamsey textfile");
                         System.exit(0);
                         
                     default:

@@ -13,20 +13,20 @@ public class Monitoring {
 	public Monitoring() {
 		Observatories = new ArrayList<>();
 	}
-	// This method returns the largest “galamsey” colour value ever recorded.
+	// This method returns the largest “galamsey�? colour value ever recorded.
 	public int largestGalamColVal() {
 		return 0;
 	}
 	public void addObservatory(Observatory Observe) {
 		Observatories.add(Observe);
 	}
-	// This method returns A list of all “galamsey” recorded with colour 
+	// This method returns A list of all “galamsey�? recorded with colour 
 	// value greater than a given/arbitrary number.
 	public ArrayList<Observatory> getObservatories(){
 		
 		return Observatories;
 	}
-	// This method returns The observatory with the largest average “galamsey” colour value.
+	// This method returns The observatory with the largest average “galamsey�? colour value.
 	
 	public String getObservatoryWithLargeAverage() {
 		Observatory large = null;
