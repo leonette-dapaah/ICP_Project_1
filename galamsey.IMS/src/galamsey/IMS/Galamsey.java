@@ -1,10 +1,10 @@
-package galamsey.IMS;
+package jdbc;
 public class Galamsey {
 
     private String veg_colour;
     private String position;
     private int colour_val;
-    private int year;
+    private String year;
 
     public Galamsey(){
 
@@ -14,7 +14,7 @@ public class Galamsey {
      * An overloaded Galamsey constructor
      * */
     public Galamsey(String veg_colour, String position,
-                    int colour_val, int year){
+                    int colour_val, String year){
         this.veg_colour = veg_colour;
         this.position = position;
         this.colour_val = colour_val;
@@ -66,14 +66,14 @@ public class Galamsey {
     /**
      * @return Year of the event
      * */
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
     /**
      * @param year
      * */
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
     

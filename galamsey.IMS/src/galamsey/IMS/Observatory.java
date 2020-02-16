@@ -1,4 +1,4 @@
-package galamsey.IMS;
+package jdbc;
 import java.util.ArrayList;
 /**
  * @author Abdul-Aziz
@@ -8,11 +8,11 @@ public class Observatory {
 	
 	private String obsName;
 	private String country;
-	private int yearStarted;
+	private String yearStarted;
 	private double areaCovered;
 	private ArrayList<Galamsey>GalamseyEvents;
 	
-	public Observatory(String obsName, String country, int yearStarted, double areaCovered) {
+	public Observatory(String obsName, String country, String yearStarted, double areaCovered) {
 		this.obsName = obsName;
 		this.country = country;
 		this.yearStarted = yearStarted;
@@ -51,14 +51,14 @@ public class Observatory {
 	/**
 	 * @return the yearStarted
 	 */
-	public int getYearStarted() {
+	public String getYearStarted() {
 		return yearStarted;
 	}
 
 	/**
 	 * @param yearStarted the yearStarted to set
 	 */
-	public void setYearStarted(int yearStarted) {
+	public void setYearStarted(String yearStarted) {
 		this.yearStarted = yearStarted;
 	}
 
