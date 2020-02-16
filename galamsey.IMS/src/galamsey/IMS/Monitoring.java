@@ -1,11 +1,12 @@
 package jdbc;
 import java.util.ArrayList;
 
+/**
+ * @author Hussein Fuseini
+ *
+ */
 public class Monitoring {
-	/**
-	 * @author Hussein Fuseini
-	 * @version 1.0.1
-	 */
+	
 	
 	
 	private ArrayList<Observatory> Observatories;

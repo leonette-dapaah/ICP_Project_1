@@ -76,6 +76,9 @@ public class Observatory {
 		this.areaCovered = areaCovered;
 	}
 
+	/**
+	 * @return the GalamseyEvents
+	 */
 	public ArrayList<Galamsey> getGalamseyEvents() {
 		return GalamseyEvents;
 	}

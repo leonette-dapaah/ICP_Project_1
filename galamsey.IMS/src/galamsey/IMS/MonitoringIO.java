@@ -8,19 +8,37 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.sql.*;
 
+/**
+ * @version 1.0.1
+ *
+ */
 public class MonitoringIO {
+	
+
 	public static void main (String[] args){
 		
+		/**
+		 * Description of some variables here.
+		 */
 		final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		final String DB_URL = "jdbc:mysql://localhost:3306/test?useSSL=false";
 		
 		final String USER = "hawa";
 		final String PASS = "aziz";
 		 
+		//Creating instance of the Scanner class to accept input
 		Scanner s = new Scanner(System.in);
         String u_choice = "";
+        
+        /**
+         * Creating an instance of the Monitoring class.
+         */
         Monitoring Africa = new Monitoring();
 
+        
+        /**
+         * Displaying the options to the user.
+         */
         while (u_choice != "4"){
             System.out.println("          MENU        ");
             System.out.println("Enter 1 for observatory data");
@@ -30,10 +48,15 @@ public class MonitoringIO {
 
             u_choice = s.nextLine();
 
-
+            /**
+             * @param u_choice
+             * Takes the user's choice and choose the case to run.
+             */
                 switch (u_choice) {
                     case "1":
                         try {
+                        	
+                        	//Collecting data from the user.
                             System.out.println("Name of observatory: ");
                             String name = s.nextLine();
 
@@ -42,20 +65,28 @@ public class MonitoringIO {
 
                             System.out.println("Enter year galamsey operations began: ");
                             String yr = s.nextLine();
-//                            String year = s.nextLine();
-//                            int yr = Integer.parseInt(year);
+//                          String year = s.nextLine();
+//                          int yr = Integer.parseInt(year);
 
                             System.out.println("Enter area covered by the observatory (in square kilometers): ");               
                             double c = Double.parseDouble(s.nextLine());
 
-                           // System.out.println("List of 'galamsey' events recorded: ");
                             System.out.println();
+                            // System.out.println("List of 'galamsey' events recorded: ");
+                            
+                            
+                            /**
+                    		 * Description of some variables here.
+                    		 */
                             
                             // Creating connection with the database and putting the inputs into the Monitoring database table
                             Connection myConn = null;
                     		Statement myStmt = null; //We can also used PreparedStatement
                     		 
                     		try {
+                    			/**
+                    			 * Writing the inputs into the tables of the databasee.
+                    			 */
                     			Class.forName(JDBC_DRIVER);
                     			
                     			myConn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -73,11 +104,14 @@ public class MonitoringIO {
                     			}
                     		
                     		    
-                            
+                    		/**
+                    		 *Creating an observatory instance and putting it into the Monitoring object called Africa.
+                    		 *@param name, location, yr, c
+                    		 */
                     		 Africa.addObservatory(new Observatory(name, location, yr, c));
                     		 System.out.println("Input recorded!");
-                             //System.out.println(Africa.getObservatories().get(Africa.getObservatories().size()-1));
-                             //System.out.println("----------------------------------------------\n");
+//                           System.out.println(Africa.getObservatories().get(Africa.getObservatories().size()-1));
+//                           System.out.println("----------------------------------------------\n");
 //                           private Observatory obs = new Observatory(name, location, yr, c);
 //                           Monitoring.addObservatories(obs);
                             break;
@@ -88,8 +122,12 @@ public class MonitoringIO {
                             break;
                         }
 
+                        
+                       
                     case "2":
                         try {
+                        	//Collecting data from the user
+                        	
                             System.out.println("Enter vegetation colour: ");
                             String colour = s.nextLine();
 
@@ -107,6 +145,9 @@ public class MonitoringIO {
                             Connection myConn = null;
                     		Statement myStmt = null; //We can also used PreparedStatement
                     		 
+                    		/**
+                    		 * Writing the data collected into a database.
+                    		 */
                     		try {
                     			Class.forName(JDBC_DRIVER);
                     			
@@ -124,6 +165,7 @@ public class MonitoringIO {
                     				se.printStackTrace();
                     			}
                             
+                    		//
                             Africa.getObservatories().get(Africa.getObservatories().size()-1).addGalamsey(new Galamsey(colour, position, cv,yr));
                             System.out.println("Input recorded!");
                            // System.out.println(Africa.getObservatories().get(Africa.getObservatories().size()-1).galamseyAboveValueOf(0));
@@ -185,8 +227,8 @@ public class MonitoringIO {
                 		
                     	try {
                     		
-                    		PrintWriter pw = new PrintWriter(new File("C:\\Users\\Abdul-Aziz\\Desktop\\ICP_Project_1\\galamsey.IMS\\src\\galamsey\\IMS\\Monitoring.csv"));
-                    		PrintWriter pw1 = new PrintWriter(new File("C:\\Users\\Abdul-Aziz\\Desktop\\ICP_Project_1\\galamsey.IMS\\src\\galamsey\\IMS\\Observatory.csv"));
+                    		PrintWriter pw = new PrintWriter(new File("C:\\Users\\Abdul-Aziz\\Desktop\\icp_java_week11_LoginGUIMySQL\\Monitoring.csv"));
+                    		PrintWriter pw1 = new PrintWriter(new File("C:\\Users\\Abdul-Aziz\\Desktop\\icp_java_week11_LoginGUIMySQL\\Observatory.csv"));
                     		StringBuilder sb = new StringBuilder();
                     		StringBuilder sb1 = new StringBuilder();
 

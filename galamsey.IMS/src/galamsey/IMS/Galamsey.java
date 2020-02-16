@@ -1,4 +1,9 @@
 package jdbc;
+
+/**
+ * @version 1.0.1
+ *
+ */
 public class Galamsey {
 
     private String veg_colour;
