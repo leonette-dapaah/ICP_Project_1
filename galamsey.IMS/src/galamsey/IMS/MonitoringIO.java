@@ -165,7 +165,11 @@ public class MonitoringIO {
                     				se.printStackTrace();
                     			}
                             
-                    		//
+                    		/**
+                    	     *Creating a galamsey event and putting it into 
+                    	     *the ArrayList of the Observatory created
+                    	     * 
+                    	     * */
                             Africa.getObservatories().get(Africa.getObservatories().size()-1).addGalamsey(new Galamsey(colour, position, cv,yr));
                             System.out.println("Input recorded!");
                            // System.out.println(Africa.getObservatories().get(Africa.getObservatories().size()-1).galamseyAboveValueOf(0));
