@@ -60,10 +60,10 @@ public class MonitoringIO {
                             System.out.println("Name of observatory: ");
                             String name = s.nextLine();
 
-                            System.out.println("Enter country location: ");
+                            System.out.println("Enter country of operation: ");
                             String location = s.nextLine();
 
-                            System.out.println("Enter year galamsey operations began: ");
+                            System.out.println("Enter year galamsey operations began (YYYY-MM-DD): ");
                             String yr = s.nextLine();
 //                          String year = s.nextLine();
 //                          int yr = Integer.parseInt(year);
@@ -84,9 +84,11 @@ public class MonitoringIO {
                     		Statement myStmt = null; //We can also used PreparedStatement
                     		 
                     		try {
+                    			
                     			/**
                     			 * Writing the inputs into the tables of the databasee.
                     			 */
+                    			
                     			Class.forName(JDBC_DRIVER);
                     			
                     			myConn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -134,11 +136,11 @@ public class MonitoringIO {
                             System.out.println("Enter position (Latitude and Longitude (eg: 5.603 N, 0.187 W))");
                             String position = s.nextLine();
 
-                            System.out.println("Enter colour value: ");
+                            System.out.println("Enter colour value (from 1 to 3): ");
                             String col_val = s.nextLine();
                             int cv = Integer.parseInt(col_val);
 
-                            System.out.println("Enter year of event: ");
+                            System.out.println("Enter year of event (YYYY-MM-DD): ");
                             String yr = s.nextLine();
                             
                             // Creating connection with database and inputing the records

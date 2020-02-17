@@ -26,6 +26,12 @@ public class Monitoring {
 	public int largestGalamColVal() {
 		return 0;
 	}
+	
+	/**
+	 * @param observatory
+	 * Takes an instance of an observatory and adds it to 
+	 * an instance of the monitoring class
+	 */
 	public void addObservatory(Observatory Observe) {
 		Observatories.add(Observe);
 	}

@@ -114,6 +114,11 @@ public class Observatory {
 			return 0.0;
 			
 	}
+	
+	/**
+	 * @param value
+	 * @return the GalamseyEvents above a given value
+	 */
 	public String galamseyAboveValueOf(int value) {
 		String info = "";
 		int i = 1;
@@ -126,7 +131,10 @@ public class Observatory {
 				
 		return info;
 	}
-
+	
+	/**
+	 * @return a toString of all the data collected
+	 */
 	public String toString() {
 		return "Name of Observatory: "+getObsName()+"\nCountry of Observatory: "+getCountry()+
 				"\nYear started: "+getYearStarted()+"\nArea covered by Observatory: "+getAreaCovered();
