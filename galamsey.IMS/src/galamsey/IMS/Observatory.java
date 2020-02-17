@@ -12,6 +12,10 @@ public class Observatory {
 	private double areaCovered;
 	private ArrayList<Galamsey>GalamseyEvents;
 	
+	/**
+     * An overloaded Observatory constructor
+     * 
+     * */
 	public Observatory(String obsName, String country, String yearStarted, double areaCovered) {
 		this.obsName = obsName;
 		this.country = country;
