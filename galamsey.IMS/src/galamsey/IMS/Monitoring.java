@@ -11,10 +11,18 @@ public class Monitoring {
 	
 	private ArrayList<Observatory> Observatories;
 	
+	/**
+     *Monitoring constructor
+     * 
+     * */
 	public Monitoring() {
 		Observatories = new ArrayList<>();
 	}
-	// This method returns the largest â€œgalamseyâ€? colour value ever recorded.
+	
+	/**
+     * @return 0
+     * 
+     * */
 	public int largestGalamColVal() {
 		return 0;
 	}
