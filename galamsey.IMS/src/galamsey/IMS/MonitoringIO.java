@@ -233,8 +233,8 @@ public class MonitoringIO {
                 		
                     	try {
                     		
-                    		PrintWriter pw = new PrintWriter(new File("C:\\Users\\Abdul-Aziz\\Desktop\\icp_java_week11_LoginGUIMySQL\\Monitoring.csv"));
-                    		PrintWriter pw1 = new PrintWriter(new File("C:\\Users\\Abdul-Aziz\\Desktop\\icp_java_week11_LoginGUIMySQL\\Observatory.csv"));
+                    		PrintWriter pw = new PrintWriter(new File("resources\\Monitoring.csv"));
+                    		PrintWriter pw1 = new PrintWriter(new File("resources\\Observatory.csv"));
                     		StringBuilder sb = new StringBuilder();
                     		StringBuilder sb1 = new StringBuilder();
 
