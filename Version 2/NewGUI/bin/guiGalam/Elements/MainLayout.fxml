@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="800.0" style="-fx-background-color: #2A363F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiGalam.Elements.MainItemsController">
+   <center>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #2A363F;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="800.0" style="-fx-background-color: #2A363F;">
+               <children>
+                  <Label alignment="CENTER" layoutX="300.0" layoutY="23.0" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;" text="Galamsey Monitor System" />
+                  <Separator layoutY="61.0" prefWidth="800.0" />
+                  <FlowPane layoutX="300.0" layoutY="184.0" prefHeight="161.0" prefWidth="200.0" vgap="25.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#goObservatory" prefWidth="200.0" ripplerFill="#f8f5f5" style="-fx-background-color: #2F4D4A; -fx-background-radius: 5;" text="Observatory Data Entry" textFill="#d3d3d3" />
+                        <JFXButton onAction="#goGalamsey" prefWidth="200.0" style="-fx-background-color: #2F4D4A; -fx-background-radius: 5;" text="Galamsey Data Entry" textFill="WHITE" />
+                        <JFXButton onAction="#goStatistics" prefWidth="200.0" style="-fx-background-color: #2F4D4A; -fx-background-radius: 5;" text="Monitoring Statistics" textFill="#fffdfd" />
+                     </children>
+                  </FlowPane>
+                  <Label fx:id="Final" layoutX="307.0" layoutY="345.0" prefHeight="38.0" prefWidth="189.0" textFill="#fff9f9" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

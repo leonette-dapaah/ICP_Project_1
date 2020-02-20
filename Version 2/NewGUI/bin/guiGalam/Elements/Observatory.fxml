@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiGalam.Elements.MainItemsController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2A363F;" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutX="410.0" layoutY="98.0" orientation="VERTICAL" prefHeight="282.0" prefWidth="8.0" />
+            <Separator layoutY="51.0" prefWidth="800.0" />
+            <FlowPane layoutX="210.0" layoutY="110.0" prefHeight="193.0" prefWidth="171.0" vgap="10.0">
+               <children>
+                  <TextField fx:id="in1" prefHeight="30.0" />
+                  <TextField fx:id="in2" prefHeight="30.0" />
+                  <TextField fx:id="in3" prefHeight="30.0" />
+                  <TextField fx:id="in4" prefHeight="30.0" />
+               </children>
+            </FlowPane>
+            <FlowPane hgap="10.0" layoutX="10.0" layoutY="110.0" prefHeight="194.0" prefWidth="192.0" vgap="10.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="184.0" style="-fx-text-fill: white;" text="Name" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="184.0" style="-fx-text-fill: white;" text="Country" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="184.0" style="-fx-text-fill: white;" text="Year" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="184.0" style="-fx-text-fill: white;" text="Area in sqre Km" textFill="#f5f0f0">
+                     <FlowPane.margin>
+                        <Insets top="2.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+            </FlowPane>
+            <Button fx:id="b1" layoutX="138.0" layoutY="316.0" mnemonicParsing="false" onAction="#genGen" prefHeight="32.0" prefWidth="129.0" style="-fx-background-radius: 5; -fx-background-color: #2F4D4A;" text="Save" textFill="#eee8e8">
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="246.0" layoutY="14.0" prefHeight="30.0" prefWidth="307.0" style="-fx-text-fill: white;" text="Observatory Data Entry">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <FlowPane layoutX="445.0" layoutY="105.0" prefHeight="255.0" prefWidth="171.0" vgap="15.0">
+               <children>
+                  <Label prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" text="Name" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" text="Country" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="63.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" text="Year" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="116.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" text="Area" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
+            <FlowPane layoutX="625.0" layoutY="105.0" prefHeight="255.0" prefWidth="171.0" vgap="15.0">
+               <children>
+                  <Label fx:id="t1" layoutY="100.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="t2" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="t3" layoutX="10.0" layoutY="63.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="t4" layoutX="10.0" layoutY="116.0" prefHeight="33.0" prefWidth="162.0" style="-fx-text-fill: white;" textFill="#f5f0f0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
