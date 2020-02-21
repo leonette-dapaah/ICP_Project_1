@@ -68,7 +68,7 @@
                   <Insets top="8.0" />
                </padding>
             </FlowPane>
-            <Button fx:id="b1" layoutX="138.0" layoutY="316.0" mnemonicParsing="false" onAction="#genGen" prefHeight="32.0" prefWidth="129.0" style="-fx-background-radius: 5; -fx-background-color: #2F4D4A;" text="Save" textFill="#eee8e8">
+            <Button fx:id="b1" layoutX="138.0" layoutY="316.0" mnemonicParsing="false" onAction="#saveObs" prefHeight="32.0" prefWidth="129.0" style="-fx-background-radius: 5; -fx-background-color: #2F4D4A;" text="Save" textFill="#eee8e8">
                <effect>
                   <Glow />
                </effect>
