@@ -50,11 +50,16 @@
             </Label>
             <Label fx:id="t1" alignment="CENTER" layoutX="463.0" layoutY="126.0" prefHeight="262.0" prefWidth="281.0" style="-fx-text-fill: white;" textFill="#eee5e5" wrapText="true">
                <font>
-                  <Font size="51.0" />
+                  <Font size="22.0" />
                </font>
                <padding>
                   <Insets right="6.0" />
                </padding>
+            </Label>
+            <Label fx:id="t2" layoutX="508.0" layoutY="70.0" prefHeight="46.0" prefWidth="192.0" style="-fx-text-fill: white;" textFill="#eee9e9">
+               <font>
+                  <Font size="20.0" />
+               </font>
             </Label>
          </children>
       </AnchorPane>
